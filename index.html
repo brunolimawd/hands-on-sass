@@ -31,10 +31,43 @@
         <h1>hands-on</h1>
       </section>
       <section>
-        <h2>Grumpy, eveniet!</h2>
+        <h2>Primeiro, algumas boas praticas de CSS =)</h2>
       </section>
       <section>
-        <h1>Veritatis, adipisci.</h1>
+        <h3>.class</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, nam.</p>
+        <pre>
+          <code data-trim>
+/* bad */
+div:first-of-type :last-child > p ~ *
+
+/* good */
+div:first-of-type .info
+          </code>
+        </pre>
+      </section>
+      <section>
+        <h3>!important</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, nam.</p>
+        <pre>
+          <code data-trim>
+/* bad */
+.bar {
+  color: green !important;
+}
+.foo {
+  color: red;
+}
+
+/* good */
+.foo.bar {
+  color: green;
+}
+.foo {
+  color: red;
+}
+          </code>
+        </pre>
       </section>
     </div>
   </div>
