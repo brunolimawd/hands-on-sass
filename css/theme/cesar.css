@@ -197,7 +197,7 @@ body {
  * LINKS
  *********************************************/
 .reveal a {
-  color: #f66b21;
+  color: #faa61a;
   text-decoration: none;
   -webkit-transition: color 0.15s ease;
   -moz-transition: color 0.15s ease;
@@ -224,23 +224,23 @@ body {
 
 .reveal a:hover img {
   background: rgba(255, 255, 255, 0.2);
-  border-color: #f66b21;
+  border-color: #faa61a;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
 
 /*********************************************
  * NAVIGATION CONTROLS
  *********************************************/
 .reveal .controls div.navigate-left, .reveal .controls div.navigate-left.enabled {
-  border-right-color: #f66b21; }
+  border-right-color: #faa61a; }
 
 .reveal .controls div.navigate-right, .reveal .controls div.navigate-right.enabled {
-  border-left-color: #f66b21; }
+  border-left-color: #faa61a; }
 
 .reveal .controls div.navigate-up, .reveal .controls div.navigate-up.enabled {
-  border-bottom-color: #f66b21; }
+  border-bottom-color: #faa61a; }
 
 .reveal .controls div.navigate-down, .reveal .controls div.navigate-down.enabled {
-  border-top-color: #f66b21; }
+  border-top-color: #faa61a; }
 
 .reveal .controls div.navigate-left.enabled:hover {
   border-right-color: #74a8cb; }
@@ -261,7 +261,7 @@ body {
   background: rgba(0, 0, 0, 0.2); }
 
 .reveal .progress span {
-  background: #f66b21;
+  background: #faa61a;
   -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
@@ -270,4 +270,30 @@ body {
  * SLIDE NUMBER
  *********************************************/
 .reveal .slide-number {
-  color: #f66b21; }
+  color: #faa61a; }
+
+/*********************************************
+ * EXTRA
+ *********************************************/
+
+.by-cesar {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.poster {
+  width: 60%;
+  height: auto;
+}
+
+.emoji {
+  width: .7em;
+  height: .7em;
+  display: inline-block;
+  margin: 0em;
+}
+
+.reveal section img.emoji {
+  margin: 0;
+}

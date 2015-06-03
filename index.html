@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="css/reveal.css">
   <link rel="stylesheet" href="css/theme/cesar.css" id="theme">
   <!-- Code syntax highlighting -->
-  <link rel="stylesheet" href="lib/css/zenburn.css">
+  <link rel="stylesheet" href="lib/css/monokai_sublime.css">
   <!-- Printing and PDF exports -->
   <script>
     var link = document.createElement( 'link' );
@@ -26,56 +26,112 @@
 <body>
   <div class="reveal">
     <div class="slides">
-      <section>
-        <img data-src="images/sass.svg">
-        <h1>hands-on</h1>
-      </section>
-      <section>
-        <h2>Primeiro, algumas boas praticas de CSS =)</h2>
-      </section>
-      <section>
-        <h3>.class</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, nam.</p>
-        <pre>
-          <code data-trim>
-/* bad */
-div:first-of-type :last-child > p ~ *
-
-/* good */
-div:first-of-type .info
-          </code>
-        </pre>
-      </section>
-      <section>
-        <h3>!important</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, nam.</p>
-        <pre>
-          <code data-trim>
-/* bad */
-.bar {
-  color: green !important;
-}
-.foo {
-  color: red;
-}
-
-/* good */
-.foo.bar {
-  color: green;
-}
-.foo {
-  color: red;
-}
-          </code>
-        </pre>
+      <section data-markdown>
+        <script type="text/template">
+          ![sass](images/sass.svg) <!-- .element: class="poster" -->
+          # hands-on
+        </script>
       </section>
       <section data-markdown>
-        ### #refs
+        <script type="text/template">
+          ## Primeiro, algumas boas praticas de CSS :sunglasses:
+        </script>
+      </section>
+      <section data-markdown>
+        <script type="text/template">
+          ### .class
+
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, nam.
+
+          ```css
+          /* bad */
+          div:first-of-type :last-child > p ~ *
+
+          /* good */
+          div:first-of-type .info
+          ```
+        </script>
+      </section>
+      <section data-markdown>
+        <script type="text/template">
+          ### !important :skull:
+
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, nam.
+
+          ```
+          /* bad */
+          .bar {
+            color: green !important;
+          }
+          .foo {
+            color: red;
+          }
+
+          /* good */
+          .foo.bar {
+            color: green;
+          }
+          .foo {
+            color: red;
+          }
+          ```
+        </script>
+      </section>
+      <section data-markdown>
+        <script type="text/template">
+          ### #preprocessing
+        </script>
+      </section>
+      <section data-markdown>
+        <script type="text/template">
+          ### #variables
+        </script>
+      </section>
+      <section data-markdown>
+        <script type="text/template">
+          ### #nesting
+        </script>
+      </section>
+      <section data-markdown>
+        <script type="text/template">
+          ### #partials
+        </script>
+      </section>
+      <section data-markdown>
+        <script type="text/template">
+          ### #import
+        </script>
+      </section>
+      <section data-markdown>
+        <script type="text/template">
+          ### #mixins
+        </script>
+      </section>
+      <section data-markdown>
+        <script type="text/template">
+          ### #extend && #inheritance
+        </script>
+      </section>
+      <section data-markdown>
+        <script type="text/template">
+          ### #operators
+        </script>
+      </section>
+      <section data-markdown>
+        <script type="text/template">
+          ### #functions
+        </script>
+      </section>
+      <section data-markdown>
+        <script type="text/template">
+          ### #refs :metal:
         
-        - [Frontend Guidelines](http://bit.ly/1JiRUed)
-        - [Sass guide](http://bit.ly/1dcYiGd)
+          - [Frontend Guidelines](http://bit.ly/1JiRUed)
+          - [Sass guide](http://bit.ly/1dcYiGd)
+        </script>
       </section>
     </div>
+    <img class="by-cesar" src="images/cesar.png">
   </div>
   <script src="lib/js/head.min.js"></script>
   <script src="js/reveal.js"></script>
@@ -95,9 +151,10 @@ div:first-of-type .info
         { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
         { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
         { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-        { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
         { src: 'plugin/zoom-js/zoom.js', async: true },
-        { src: 'plugin/notes/notes.js', async: true }
+        { src: 'plugin/notes/notes.js', async: true },
+        { src: 'plugin/emojify/js/emojify.js', async: true, callback: function() { emojify.setConfig({ img_dir: 'plugin/emojify/images/basic' }); emojify.run(); } }
       ]
     });
   </script>
